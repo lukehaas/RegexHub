@@ -47,7 +47,7 @@ export const patterns = [{
 	tags:"url,address,http"
 },
 {
-	name:"IP Address",
+	name:"IPv4 Address",
 	regex:/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/,
 	description:"Match IP v4 addresses",
 	tags:"tcpip,internet,address"
