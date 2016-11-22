@@ -108,6 +108,9 @@ export default Regex;
 
 /*
 
+run: webpack -p
+to generate bundle.js
+
 Add reset button - once regex is edited the button will restore it?
 
 
