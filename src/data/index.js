@@ -18,13 +18,13 @@ export const patterns = [{
 },
 {
 	name:"Password",
-	regex:/^[a-z0-9_-]{6,18}$/,
+	regex:/^[a-z0-9+_-]{6,18}$/,
 	description:"A string between 6 and 18 characters, allowing alphanumeric characters and hypehns and underscores",
 	tags:"password,validation"
 },
 {
 	name:"Hex Value",
-	regex:/^#?([a-f0-9]{6}|[a-f0-9]{3})$/,
+	regex:/^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/,
 	description:"Base 16 numbers, such as RGB values",
 	tags:"hex,color"
 },
@@ -36,9 +36,15 @@ export const patterns = [{
 },
 {
 	name:"Email",
-	regex:/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/,
+	regex:/^([a-z0-9+_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,24})$/,
 	description:"Match standards complient email addresses",
 	tags:"email,validation"
+},
+{
+	name:"SRC of image tag",
+	regex:/\< *[img][^\>]*[src] *= *[\"\']{0,1}([^\"\'\ >]*)/,
+	description:"Match the src attribute of an HTML image tag",
+	tags:"html,tag,image"
 },
 {
 	name:"URL",
@@ -99,5 +105,23 @@ export const patterns = [{
 	regex:/[\r\n]|$/,
 	description:"Match new lines within text",
 	tags:"text"
-}
+},
+{
+	name:"ID of Youtube video",
+	regex:/https?:\/\/(?:youtu\.be\/|(?:[a-z]{2,3}\.)?youtube\.com\/watch(?:\?|#\!)v=)([\w-]{11}).*/gi,
+	description:"Match the ID of a youtube video URL",
+	tags:"video,youtube,url"
+},
+{
+	name:"CSS comment",
+	regex:/\/\*[^*]*\*+([^/*][^*]*\*+)*\//,
+	description:"Match standard CSS comments",
+	tags:"css,comment,code"
+}/*,
+{
+	name:"Word exception",
+	regex:/\bTarzan\b|\bJane\b|\bSuperman\b|(\w+)/,
+	description:"Match all words apart from the ones listed",
+	tags:"words,sentence,blacklist"
+}*/
 ];

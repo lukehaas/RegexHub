@@ -8,7 +8,7 @@ class Regex extends Component {
 		this.state = {
 			editableRegex: props.regex.toString(),
 			test:"",
-			output:false,
+			output:[],
 			open:false
 		};
 	}
@@ -45,22 +45,33 @@ class Regex extends Component {
 			try {
 				out = reg.exec(this.state.test);
 			} catch(e) {
-				out = "Invalid regex";
+				out = ["Invalid regex"];
 			}
 
 			if(!out) {
-				out = [];
-				out[0] = "null";
+
+				out = ["null"];
 			} else if(out[0]==="") {
-				out[0] = "null";
+				out = ["null"];
+			} else {
+				console.log(out);
+				var o = [];
+				o[0] = out[0];
+				for(var k = 1;k < out.length;k++) {
+
+						if(typeof out[k] === "string") {
+							o.push(out[k]);
+						}
+				}
+				out = o;
 			}
 
 			this.setState({
-				output:out[0]
+				output:out
 			});
 		} else {
 			this.setState({
-				output:false
+				output:[]
 			});
 		}
 
@@ -80,7 +91,7 @@ class Regex extends Component {
 		}
 	}
 	render() {
-		var output = <div className="output">Output:<br/>{this.state.output}</div>;
+		var output = <div className="output">Output:<ul>{this.state.output.map((data,i) => {return <li key={i}>{data}</li>})}</ul></div>;
 		return (
 			<div className="panel panel-default">
 				<div className="panel-heading">
@@ -97,7 +108,7 @@ class Regex extends Component {
 					<form>
 						<input type="text" placeholder="Test string" value={this.state.test} onChange={e => this.handleTestChange(e.target.value)} />
 					</form>
-					{this.state.output ? output : ""}
+					{this.state.output.length>0 ? output : ""}
 				</div>
 			</div>
 		);
