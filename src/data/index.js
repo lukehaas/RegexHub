@@ -6,7 +6,7 @@ export const patterns = [{
 },
 {
 	name:"HTML tags",
-	regex:/^<([a-z]+)([^<]+)*(?:>(.*)<\/\1>|\s+\/>)$/,
+	regex:/^<([a-z0-9]+)([^<]+)*(?:>(.*)<\/\1>|\s+\/>)$/,
 	description:"Match opening and closing HTML tags with content between",
 	tags:"markup,xml,html"
 },
