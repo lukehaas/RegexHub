@@ -1,7 +1,7 @@
 export const patterns = [{
 	name:"Date in format dd/mm/yyyy",
-	regex:/^([1-9]|0[1-9]|[12][0-9]|3[01])\D([1-9]|0[1-9]|1[012])\D(19[0-9][0-9]|20[0-9][0-9])$/,
-	description:"Will match dates with slashes or with spaces dd/mm/yyyy dd mm yyyy",
+	regex:/^(0?[1-9]|[12][0-9]|3[01])([ /\-])(0?[1-9]|1[012])\2(19[0-9][0-9]|20[0-9][0-9])$/,
+	description:"Will match dates with dashes, slashes or with spaces dd-mm-yyyy dd/mm/yyyy dd mm yyyy",
 	tags:"date time"
 },
 {
