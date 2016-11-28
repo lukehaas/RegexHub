@@ -117,7 +117,13 @@ export const patterns = [{
 	regex:/\/\*[^*]*\*+([^/*][^*]*\*+)*\//,
 	description:"Match standard CSS comments",
 	tags:"css,comment,code"
-}/*,
+},
+{
+	name:"IP address",
+	regex:/^([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})$/,
+	description:"Match the simple ipv4 address",
+	tags:"ip"
+},/*,
 {
 	name:"Word exception",
 	regex:/\bTarzan\b|\bJane\b|\bSuperman\b|(\w+)/,
