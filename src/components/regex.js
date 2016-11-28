@@ -53,8 +53,7 @@ class Regex extends Component {
 				out = ["null"];
 			} else if(out[0]==="") {
 				out = ["null"];
-			} else {
-				console.log(out);
+			} else {				
 				var o = [];
 				o[0] = out[0];
 				for(var k = 1;k < out.length;k++) {

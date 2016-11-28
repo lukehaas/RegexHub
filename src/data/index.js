@@ -12,13 +12,13 @@ export const patterns = [{
 },
 {
 	name:"Username",
-	regex:/^[a-z0-9_-]{3,16}$/,
+	regex:/^[a-zA-Z0-9_-]{3,16}$/,
 	description:"A string between 3 and 16 characters, allowing alphanumeric characters and hyphens and underscores",
 	tags:"username,validation"
 },
 {
 	name:"Password",
-	regex:/^[a-z0-9+_-]{6,18}$/,
+	regex:/^[a-zA-Z0-9+_-]{6,18}$/,
 	description:"A string between 6 and 18 characters, allowing alphanumeric characters and hypehns and underscores",
 	tags:"password,validation"
 },
