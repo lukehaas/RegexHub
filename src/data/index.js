@@ -59,6 +59,12 @@ export const patterns = [{
 	tags:"tcpip,internet,address"
 },
 {
+	name:"IPv6 Address",
+	regex:/^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$/,
+	description:"Match IP v6 addresses",
+	tags:"tcpip,internet,address"
+},
+    {
 	name:"Positive Integer",
 	regex:/^\d+$/,
 	descriptions:"Match whole numbers above zero",
@@ -117,11 +123,12 @@ export const patterns = [{
 	regex:/\/\*[^*]*\*+([^/*][^*]*\*+)*\//,
 	description:"Match standard CSS comments",
 	tags:"css,comment,code"
-}/*,
-{
-	name:"Word exception",
-	regex:/\bTarzan\b|\bJane\b|\bSuperman\b|(\w+)/,
-	description:"Match all words apart from the ones listed",
-	tags:"words,sentence,blacklist"
-}*/
+}
+    /*,
+    {
+        name:"Word exception",
+        regex:/\bTarzan\b|\bJane\b|\bSuperman\b|(\w+)/,
+        description:"Match all words apart from the ones listed",
+        tags:"words,sentence,blacklist"
+    }*/
 ];
