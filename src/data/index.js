@@ -117,7 +117,14 @@ export const patterns = [{
 	regex:/\/\*[^*]*\*+([^/*][^*]*\*+)*\//,
 	description:"Match standard CSS comments",
 	tags:"css,comment,code"
-}/*,
+}
+{
+	name:"Wordpress shortcodes",
+	regex:/^\[([a-z-_0-9]+)([^\[]+)*(?:\](.*)\[\/\1\]|\s+\/\])$/,
+	description:"Matches opening and closing shortcode tags with content in-between them.",
+	tags:"wordpress,shortcodes,markup"
+}
+/*,
 {
 	name:"Word exception",
 	regex:/\bTarzan\b|\bJane\b|\bSuperman\b|(\w+)/,
