@@ -36,8 +36,8 @@ export const patterns = [{
 },
 {
 	name:"Email",
-	regex:/^([a-z0-9+_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,24})$/,
-	description:"Match standards complient email addresses",
+	regex:/^.+@.+$/,
+	description:"Match standards complient email addresses. A stricter regex fully compliant with the standards is considered too complex to maintain. To actually verify an email address sending a conformation email is the only valid test.",
 	tags:"email,validation"
 },
 {
