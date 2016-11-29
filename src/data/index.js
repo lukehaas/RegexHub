@@ -18,7 +18,7 @@ export const patterns = [{
 },
 {
 	name:"Password",
-	regex:/^[a-zA-Z0-9+_-]{6,18}$/,
+	regex:/^[a-zA-Z0-9+_-]{6,32}$/,
 	description:"A string between 6 and 18 characters, allowing alphanumeric characters and hypehns and underscores",
 	tags:"password,validation"
 },
@@ -117,7 +117,7 @@ export const patterns = [{
 	regex:/\/\*[^*]*\*+([^/*][^*]*\*+)*\//,
 	description:"Match standard CSS comments",
 	tags:"css,comment,code"
-}
+},
 {
 	name:"Wordpress shortcodes",
 	regex:/^\[([a-z-_0-9]+)([^\[]+)*(?:\](.*)\[\/\1\]|\s+\/\])$/,
