@@ -135,6 +135,12 @@ export const patterns = [{
 	regex:/^\[([a-z-_0-9]+)([^\[]+)*(?:\](.*)\[\/\1\]|\s+\/\])$/,
 	description:"Matches opening and closing shortcode tags with content in-between them.",
 	tags:"wordpress,shortcodes,markup"
+},
+{
+	name: "U.S./Canadian ZIP/Postal Code",
+	regex: /(^\d{5}(-\d{4})?$)|(^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$)/,
+	description:"Matches US ZIP, ZIP+4, and Canadian Postal Codes",
+	tags:"address, postal, zip"
 }
 /*,
 {
