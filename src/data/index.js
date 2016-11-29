@@ -11,6 +11,12 @@ export const patterns = [{
 	tags: "date,time"
 },
 {
+	name: "Date and time in ISO-8601 format",
+	regex: /^(?![+-]?\d{4,5}-?(?:\d{2}|W\d{2})T)(?:|(\d{4}|[+-]\d{5})-?(?:|(0\d|1[0-2])(?:|-?([0-2]\d|3[0-1]))|([0-2]\d{2}|3[0-5]\d|36[0-6])|W([0-4]\d|5[0-3])(?:|-?([1-7])))(?:(?!\d)|T(?=\d)))(?:|([01]\d|2[0-4])(?:|:?([0-5]\d)(?:|:?([0-5]\d)(?:|\.(\d{3})))(?:|[zZ]|([+-](?:[01]\d|2[0-4]))(?:|:?([0-5]\d)))))$/,
+	description: "Will match a valid date and times in the ISO-8601 format, excludes durations.",
+	tags: "date,time"
+},
+{
 	name:"HTML tags",
 	regex:/^<([a-z1-6]+)([^<]+)*(?:>(.*)<\/\1>|\s+\/>)$/,
 	description:"Match opening and closing HTML tags with content between",
