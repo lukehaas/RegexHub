@@ -37,7 +37,7 @@ export const patterns = [{
 {
 	name:"Email",
 	regex:/^.+@.+$/,
-	description:"Match standards complient email addresses. A stricter regex fully compliant with the standards is considered too complex to maintain. To actually verify an email address sending a conformation email is the only valid test.",
+	description:"Verify that there is an @ symbol with something before it",
 	tags:"email,validation"
 },
 {
