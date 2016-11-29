@@ -113,6 +113,12 @@ export const patterns = [{
 	tags:"video,youtube,url"
 },
 {
+	name:"ID of Youtube Channel",
+	regex: /https?:\/\/(www\.)?youtube.com\/channel\/UC([-_a-z0-9]{22})/i,
+	description:"Match the ID of a youtube channel URL",
+	tags:"channel,youtube,url"
+},
+{
 	name:"CSS comment",
 	regex:/\/\*[^*]*\*+([^/*][^*]*\*+)*\//,
 	description:"Match standard CSS comments",
