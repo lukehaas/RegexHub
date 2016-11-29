@@ -1,6 +1,6 @@
 export const patterns = [{
 	name:"Date in format dd/mm/yyyy",
-	regex:/^(0?[1-9]|[12][0-9]|3[01])([ /\-])(0?[1-9]|1[012])\2(19[0-9][0-9]|20[0-9][0-9])$/,
+	regex:/^(0?[1-9]|[12][0-9]|3[01])([ /\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])$/,
 	description:"Will match dates with dashes, slashes or with spaces dd-mm-yyyy dd/mm/yyyy dd mm yyyy",
 	tags:"date,time"
 },
@@ -142,11 +142,4 @@ export const patterns = [{
 	description:"Matches US ZIP, ZIP+4, and Canadian Postal Codes",
 	tags:"address, postal, zip"
 }
-/*,
-{
-	name:"Word exception",
-	regex:/\bTarzan\b|\bJane\b|\bSuperman\b|(\w+)/,
-	description:"Match all words apart from the ones listed",
-	tags:"words,sentence,blacklist"
-}*/
 ];
