@@ -23,15 +23,9 @@ export const patterns = [{
 	tags:"username,validation"
 },
 {
-	name:"Password",
-	regex:/^[a-zA-Z0-9+_-]{6,32}$/,
-	description:"A string between 6 and 18 characters, allowing alphanumeric characters and hypehns and underscores",
-	tags:"password,validation"
-},
-{
-	name:"Hex Value",
+	name:"Hex Color Value",
 	regex:/^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/,
-	description:"Base 16 numbers, such as RGB values",
+	description:"RGB hex colors",
 	tags:"hex,color"
 },
 {
