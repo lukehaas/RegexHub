@@ -120,7 +120,7 @@ export const patterns = [{
 }
 {
 	name:"Wordpress shortcodes",
-	regex:/^\[([a-z-_]+)([^\[]+)*(?:\](.*)\[\/\1\]|\s+\/\])$/,
+	regex:/^\[([a-z-_0-9]+)([^\[]+)*(?:\](.*)\[\/\1\]|\s+\/\])$/,
 	description:"Matches opening and closing shortcode tags with content in-between them.",
 	tags:"wordpress,shortcodes,markup"
 }
