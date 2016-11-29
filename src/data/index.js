@@ -42,7 +42,7 @@ export const patterns = [{
 },
 {
 	name:"SRC of image tag",
-	regex:/\< *[img][^\>]*[src] *= *[\"\']{0,1}([^\"\'\ >]*)/,
+	regex:/^<\s*img[^>]+src\s*=\s*(["'])(.*?)\1[^>]*>$/,
 	description:"Match the src attribute of an HTML image tag",
 	tags:"html,tag,image"
 },
