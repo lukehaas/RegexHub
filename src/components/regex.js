@@ -97,7 +97,10 @@ class Regex extends Component {
 					<a href="#" className={this.state.open ? "open" : "closed"} onClick={e => this.handleOpen(e)}>{this.props.name}</a>
 
 
-					<div className={this.state.open ? "desc" : "desc closed"}><p>{this.props.description}</p></div>
+					<div className={this.state.open ? "desc" : "desc closed"}>
+						<p>{this.props.description}</p>
+						<p><a href={`https://regexper.com/#${escape(this.props.regex)}`} target="_blank">Flow Chart</a></p>
+					</div>
 
 				</div>
 				<div className="panel-body">
