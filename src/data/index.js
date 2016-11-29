@@ -144,7 +144,7 @@ export const patterns = [{
 }
 {
 	name:"Morse Code",
-	regex:/^[.-]{1,5}(?> [.-]{1,5})*(?>(?!\S*(?:\s\S*){5})[.-]{1,5}(?> [.-]{1,5})*)*$/,
+	regex:/^[.-]{1,5}(?> [.-]{1,5})*(?>     [.-]{1,5}(?> [.-]{1,5})*)*$/,
 	description:"Matches valid Morse Code",
 	tags:"morse, code"
 }
