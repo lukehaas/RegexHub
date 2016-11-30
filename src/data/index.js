@@ -141,11 +141,11 @@ export const patterns = [{
 	regex:/(^\d{5}(-\d{4})?$)|(^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$)/,
 	description:"Matches US ZIP, ZIP+4, and Canadian Postal Codes",
 	tags:"address, postal, zip"
-},
+}/*,
 {
 	name:"Morse Code",
 	regex:/^[.-]{1,5}(?> [.-]{1,5})*(?>     [.-]{1,5}(?> [.-]{1,5})*)*$/,
 	description:"Matches valid Morse Code",
 	tags:"morse, code"
-}
+}*/
 ];
