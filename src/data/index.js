@@ -5,10 +5,10 @@ export const patterns = [{
 	tags:"date,time"
 },
 {
-	name: "Time in 24-hour format",
+	name:"Time in 24-hour format",
 	regex: /([01]?[0-9]|2[0-3]):[0-5][0-9]/,
 	description: "Match times in 24 hour format",
-	tags: "date,time"
+	tags:"date,time"
 },
 {
 	name:"HTML tags",
@@ -59,10 +59,10 @@ export const patterns = [{
 	tags:"tcpip,internet,address"
 },
 {
-	name: "IPv6 Address",
-	regex: /^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$/,
+	name:"IPv6 Address",
+	regex:/^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$/,
 	description: "Match IP v6 addresses",
-	tags: "tcpip,internet,address"
+	tags:"tcpip,internet,address"
 },
 {
 	name:"Positive Integer",
@@ -120,7 +120,7 @@ export const patterns = [{
 },
 {
 	name:"ID of Youtube Channel",
-	regex: /https?:\/\/(www\.)?youtube.com\/channel\/UC([-_a-z0-9]{22})/i,
+	regex:/https?:\/\/(www\.)?youtube.com\/channel\/UC([-_a-z0-9]{22})/i,
 	description:"Match the ID of a youtube channel URL",
 	tags:"channel,youtube,url"
 },
@@ -137,9 +137,16 @@ export const patterns = [{
 	tags:"wordpress,shortcodes,markup"
 },
 {
-	name: "U.S./Canadian ZIP/Postal Code",
-	regex: /(^\d{5}(-\d{4})?$)|(^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$)/,
+	name:"U.S./Canadian ZIP/Postal Code",
+	regex:/(^\d{5}(-\d{4})?$)|(^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$)/,
 	description:"Matches US ZIP, ZIP+4, and Canadian Postal Codes",
 	tags:"address, postal, zip"
 }
+{
+	name:"Morse Code",
+	regex:/^[.-]{1,5}(?> [.-]{1,5})*(?>     [.-]{1,5}(?> [.-]{1,5})*)*$/,
+	description:"Matches valid Morse Code",
+	tags:"morse, code"
+}
 ];
+
