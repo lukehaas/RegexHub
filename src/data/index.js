@@ -6,7 +6,7 @@ export const patterns = [{
 },
 {
 	name:"Time in 24-hour format",
-	regex: /([01]?[0-9]|2[0-3]):[0-5][0-9]/,
+	regex:/([01]?[0-9]|2[0-3]):[0-5][0-9]/,
 	description: "Match times in 24 hour format",
 	tags:"date,time"
 },
@@ -141,7 +141,7 @@ export const patterns = [{
 	regex:/(^\d{5}(-\d{4})?$)|(^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$)/,
 	description:"Matches US ZIP, ZIP+4, and Canadian Postal Codes",
 	tags:"address, postal, zip"
-}
+},
 {
 	name:"Morse Code",
 	regex:/^[.-]{1,5}(?> [.-]{1,5})*(?>     [.-]{1,5}(?> [.-]{1,5})*)*$/,
@@ -149,4 +149,3 @@ export const patterns = [{
 	tags:"morse, code"
 }
 ];
-
