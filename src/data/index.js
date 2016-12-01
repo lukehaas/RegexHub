@@ -155,7 +155,7 @@ export const patterns = [{
 	tags:"morse, code"
 },
 {
-	name:"[img] Shortcode Content [/img]",
+	name:"Image shortcode",
 	regex:/\[img\](.*?)\[\/img\]/,
 	description:"Matches the content in between [img][/img]. Useful for making dynamic WYSIWYG editors",
 	tags:"img, shortcode, wysiwyg"
