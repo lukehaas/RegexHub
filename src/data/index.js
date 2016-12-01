@@ -159,5 +159,11 @@ export const patterns = [{
 	regex:/\[img\](.*?)\[\/img\]/,
 	description:"Matches the content in between [img][/img]. Useful for making dynamic WYSIWYG editors",
 	tags:"img, shortcode, wysiwyg"
+},
+{
+	name:"Brainfuck Code",
+	regex:/^[+-<>.,\[\] \t\n\r]+$/,
+	description:"Matches valid code for a brainfuck program.",
+	tags:"brainfuck, code"
 }
 ];
