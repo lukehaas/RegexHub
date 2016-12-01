@@ -153,5 +153,11 @@ export const patterns = [{
 	regex:/^[.-]{1,5}(?:[ \t]+[.-]{1,5})*(?:[ \t]+[.-]{1,5}(?:[ \t]+[.-]{1,5})*)*$/,
 	description:"Matches valid Morse Code",
 	tags:"morse, code"
+},
+{
+	name:"[img] Shortcode Content [/img]",
+	regex:/\[img\](.*?)\[\/img\]/,
+	description:"Matches the content in between [img][/img]. Useful for making dynamic WYSIWYG editors",
+	tags:"img, shortcode, wysiwyg"
 }
 ];
