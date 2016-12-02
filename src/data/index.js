@@ -108,7 +108,7 @@ export const patterns = [{
 },
 {
 	name:"Phone number",
-	regex:/^\+?[\d\s]{3,}$/,
+	regex:/^\+?(\d.*){3,}$/,
 	description:"Match phone numbers at least 3 digits long",
 	tags:"validation"
 },
