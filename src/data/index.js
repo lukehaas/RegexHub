@@ -149,6 +149,12 @@ export const patterns = [{
 	tags:"address, postal, zip"
 },
 {
+	name:"Brazilian ZIP/Postal Code",
+	regex:/^[0-9]{5}-[0-9]{3}$/,
+	description:"Matches BR ZIP/Postal Code",
+	tags:"address, postal, zip"
+},
+{
 	name:"Morse Code",
 	regex:/^[.-]{1,5}(?:[ \t]+[.-]{1,5})*(?:[ \t]+[.-]{1,5}(?:[ \t]+[.-]{1,5})*)*$/,
 	description:"Matches valid Morse Code",
