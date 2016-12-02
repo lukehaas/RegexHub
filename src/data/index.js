@@ -54,8 +54,8 @@ export const patterns = [{
 },
 {
 	name:"URL",
-	regex:/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/,
-	description:"Match URL with optional protocal",
+	regex:/^((https?|ftp|file):\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/,
+	description:"Match URL with optional protocol",
 	tags:"url,address,http"
 },
 {
