@@ -42,7 +42,7 @@ export const patterns = [{
 },
 {
 	name:"Email",
-	regex:/^.+@.+$/,
+	regex:/^.+@.+\..+$/,
 	description:"Verify that there is an @ symbol with something before it",
 	tags:"email,validation"
 },
