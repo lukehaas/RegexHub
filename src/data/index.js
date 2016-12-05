@@ -47,6 +47,12 @@ export const patterns = [{
 	tags:"email,validation"
 },
 {
+	name:"Email Validation",
+	regex:/^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/,
+	description:"Validates a given email ID. matches around 99.9% of possible valid emails.",
+	tags:"email,validation"
+},			 
+{
 	name:"SRC of image tag",
 	regex:/^<\s*img[^>]+src\s*=\s*(["'])(.*?)\1[^>]*>$/,
 	description:"Match the src attribute of an HTML image tag",
