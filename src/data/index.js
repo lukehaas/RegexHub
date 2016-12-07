@@ -17,12 +17,6 @@ export const patterns = [{
 	tags: "date,time"
 },
 {
-	name:"Date and Time format",
-	regex:/^(0[1-9]|[12][0-9]|3[01])([\/])(0[1-9]|1[012])\2([0-9][0-9][0-9][0-9]) ([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$/,
-	description: "Matches a valid date and time in the format: dd/mm/yyyy hh:mm:ss",
-	tags:"date, time"
-},
-{
 	name:"HTML tags",
 	regex:/^<([a-z1-6]+)([^<]+)*(?:>(.*)<\/\1>| *\/>)$/,
 	description:"Match opening and closing HTML tags with content between",
