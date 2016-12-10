@@ -6,7 +6,7 @@ export const patterns = [{
 },
 {
 	name:"Time in 24-hour format",
-	regex:/([01]?[0-9]|2[0-3]):[0-5][0-9]/,
+	regex:/^([01]?[0-9]|2[0-3]):[0-5][0-9]$/,
 	description: "Match times in 24 hour format",
 	tags:"date,time"
 },
