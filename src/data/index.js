@@ -71,6 +71,12 @@ export const patterns = [{
 	tags:"tcpip,internet,address"
 },
 {
+	name:"JWT",
+	regex:/^[A-Za-z0-9-_=]+\.[A-Za-z0-9-_=]+\.?[A-Za-z0-9-_.+/=]*$/,
+	description: "JSON Web Token (encoded)",
+	tags:"www"
+},
+{
 	name:"Positive Integer",
 	regex:/^\d+$/,
 	descriptions:"Match whole numbers above zero",
