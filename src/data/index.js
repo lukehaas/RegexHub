@@ -1,6 +1,6 @@
 export const patterns = [{
 	name:"Date in format dd/mm/yyyy",
-	regex:/^(0?[1-9]|[12][0-9]|3[01])([ /\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$/,
+	regex: /^(0?[1-9]|[12]\d|3[01])([ \-/])(0?[1-9]|1[0-2])\2(\d{4})(([ -])([01]?\d|2[0-3])(?::[0-5]?\d){2})?$/,
 	description:"Will match dates with dashes, slashes or with spaces (e.g. dd-mm-yyyy dd/mm/yyyy dd mm yyyy), and optional time separated by a space or a dash (e.g. dd-mm-yyyy-hh:mm:ss or dd/mm/yyyy hh:mm:ss).",
 	tags:"date,time"
 },
@@ -24,19 +24,19 @@ export const patterns = [{
 },
 {
 	name:"Username",
-	regex:/^[a-zA-Z0-9_-]{3,16}$/,
+	regex:/^[\w-]{3,16}$/,
 	description:"A string between 3 and 16 characters, allowing alphanumeric characters and hyphens and underscores",
 	tags:"username,validation"
 },
 {
 	name:"Hex Color Value",
-	regex:/^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/,
+	regex:/^#?([\dA-Fa-f]{6}|[\dA-Fa-f]{3})$/,
 	description:"RGB hex colors",
 	tags:"hex,color"
 },
 {
 	name:"URL Slug",
-	regex:/^[a-z0-9-]+$/,
+	regex:/^[\d-a-z]+$/,
 	description:"Match valid URL slugs",
 	tags:"URL"
 },
@@ -60,19 +60,19 @@ export const patterns = [{
 },
 {
 	name:"IPv4 Address",
-	regex:/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/,
+	regex:/^(?:(?:25[0-5]|2[0-4]\d|[01]?\d{1,2})\.){3}(?:25[0-5]|2[0-4]\d|[01]?\d{1,2})$/,
 	description:"Match IP v4 addresses",
 	tags:"tcpip,internet,address"
 },
 {
 	name:"IPv6 Address",
-	regex:/^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$/,
+	regex:/^(([\dA-Fa-f]{1,4}:){7}[\dA-Fa-f]{1,4}|([\dA-Fa-f]{1,4}:){1,7}:|([\dA-Fa-f]{1,4}:){1,6}:[\dA-Fa-f]{1,4}|([\dA-Fa-f]{1,4}:){1,5}(:[\dA-Fa-f]{1,4}){1,2}|([\dA-Fa-f]{1,4}:){1,4}(:[\dA-Fa-f]{1,4}){1,3}|([\dA-Fa-f]{1,4}:){1,3}(:[\dA-Fa-f]{1,4}){1,4}|([\dA-Fa-f]{1,4}:){1,2}(:[\dA-Fa-f]{1,4}){1,5}|[\dA-Fa-f]{1,4}:((:[\dA-Fa-f]{1,4}){1,6})|:((:[\dA-Fa-f]{1,4}){1,7}|:)|fe80:(:[\dA-Fa-f]{0,4}){0,4}%[\dA-Za-z]+|:{2}(f{4}(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}\d){0,1}\d)\.){3}(25[0-5]|(2[0-4]|1{0,1}\d){0,1}\d)|([\dA-Fa-f]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}\d){0,1}\d)\.){3}(25[0-5]|(2[0-4]|1{0,1}\d){0,1}\d))$/,
 	description: "Match IP v6 addresses",
 	tags:"tcpip,internet,address"
 },
 {
 	name:"JWT",
-	regex:/^[A-Za-z0-9-_=]+\.[A-Za-z0-9-_=]+\.?[A-Za-z0-9-_.+/=]*$/,
+	regex:/^[\w-=]+\.[\w-=]+\.?[\w+-.\/=]*$/,
 	description: "JSON Web Token (encoded)",
 	tags:"www"
 },
@@ -132,7 +132,7 @@ export const patterns = [{
 },
 {
 	name:"ID of Youtube Channel",
-	regex:/https?:\/\/(www\.)?youtube.com\/channel\/UC([-_a-z0-9]{22})/i,
+	regex:/ht{2}ps?:\/{2}(w{3}\.)?youtube.com\/chan{2}el\/uc([-\w]{22})/i,
 	description:"Match the ID of a youtube channel URL",
 	tags:"channel,youtube,url"
 },
@@ -144,31 +144,31 @@ export const patterns = [{
 },
 {
 	name:"Wordpress shortcodes",
-	regex:/^\[([a-z-_0-9]+)([^\[]+)*(?:\](.*)\[\/\1\]|\s+\/\])$/,
+	regex:/^\[([\d-_a-z]+)([^[]+)*(?:](.*)\[\/\1]|\s+\/])$/,
 	description:"Matches opening and closing shortcode tags with content in-between them.",
 	tags:"wordpress,shortcodes,markup"
 },
 {
 	name:"U.S./Canadian ZIP/Postal Code",
-	regex:/(^\d{5}(-\d{4})?$)|(^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$)/,
+	regex:/(^\d{5}(-\d{4})?$)|(^[A-CEGHJ-NPR-TVXY]\d[A-Z] *\d[A-Z]\d$)/,
 	description:"Matches US ZIP, ZIP+4, and Canadian Postal Codes",
 	tags:"address, postal, zip"
 },
 {
 	name:"UK Postal Code",
-	regex:/^(([gG][iI][rR] {0,}0[aA]{2})|(([aA][sS][cC][nN]|[sS][tT][hH][lL]|[tT][dD][cC][uU]|[bB][bB][nN][dD]|[bB][iI][qQ][qQ]|[fF][iI][qQ][qQ]|[pP][cC][rR][nN]|[sS][iI][qQ][qQ]|[iT][kK][cC][aA]) {0,}1[zZ]{2})|((([a-pr-uwyzA-PR-UWYZ][a-hk-yxA-HK-XY]?[0-9][0-9]?)|(([a-pr-uwyzA-PR-UWYZ][0-9][a-hjkstuwA-HJKSTUW])|([a-pr-uwyzA-PR-UWYZ][a-hk-yA-HK-Y][0-9][abehmnprv-yABEHMNPRV-Y]))) {0,}[0-9][abd-hjlnp-uw-zABD-HJLNP-UW-Z]{2}))$/,
+	regex:/^(([Gg][Ii][Rr] *0[Aa]{2})|(([Aa][Ss][Cc][Nn]|[Ss][Tt][Hh][Ll]|[Tt][Dd][Cc][Uu]|[Bb]{2}[Nn][Dd]|[Bb][Ii][Qq]{2}|[Ff][Ii][Qq]{2}|[Pp][Cc][Rr][Nn]|[Ss][Ii][Qq]{2}|[Ti][Kk][Cc][Aa]) *1[Zz]{2})|((([A-PR-UWYZa-pr-uwyz][A-HK-Ya-hk-y]?\d{1,2})|(([A-PR-UWYZa-pr-uwyz]\d[A-HJKS-UWa-hjks-uw])|([A-PR-UWYZa-pr-uwyz][A-HK-Ya-hk-y]\d[ABEHMNPRV-Yabehmnprv-y]))) *\d[ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}))$/,
 	description:"Matches all UK postcodes",
 	tags:"address, postal, zip"
 },
 {
 	name:"Brazilian ZIP/Postal Code",
-	regex:/^[0-9]{5}-[0-9]{3}$/,
+	regex:/^\d{5}-\d{3}$/,
 	description:"Matches BR ZIP/Postal Code",
 	tags:"address, postal, zip"
 },
 {
 	name:"Morse Code",
-	regex:/^[.-]{1,5}(?:[ \t]+[.-]{1,5})*(?:[ \t]+[.-]{1,5}(?:[ \t]+[.-]{1,5})*)*$/,
+	regex:/^[-.]{1,5}(?:[\t ]+[-.]{1,5})*(?:(?:[\t ]+[-.]{1,5})+)*$/,
 	description:"Matches valid Morse Code",
 	tags:"morse, code"
 },
