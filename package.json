@@ -20,7 +20,7 @@
     "chai": "^3.5.0",
     "chai-jquery": "^2.0.0",
     "css-loader": "^0.26.0",
-    "jquery": "^2.2.1",
+    "jquery": "^2.2.4",
     "jsdom": "^8.1.0",
     "mocha": "^2.4.5",
     "node-sass": "^3.13.0",
