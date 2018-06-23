@@ -71,6 +71,12 @@ export const patterns = [{
 	tags:"tcpip,internet,address"
 },
 {
+	name:"JWT",
+	regex:/^[A-Za-z0-9-_=]+\.[A-Za-z0-9-_=]+\.?[A-Za-z0-9-_.+/=]*$/,
+	description: "JSON Web Token (encoded)",
+	tags:"www"
+},
+{
 	name:"Positive Integer",
 	regex:/^\d+$/,
 	descriptions:"Match whole numbers above zero",
@@ -146,6 +152,12 @@ export const patterns = [{
 	name:"U.S./Canadian ZIP/Postal Code",
 	regex:/(^\d{5}(-\d{4})?$)|(^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$)/,
 	description:"Matches US ZIP, ZIP+4, and Canadian Postal Codes",
+	tags:"address, postal, zip"
+},
+{
+	name:"UK Postal Code",
+	regex:/^(([gG][iI][rR] {0,}0[aA]{2})|(([aA][sS][cC][nN]|[sS][tT][hH][lL]|[tT][dD][cC][uU]|[bB][bB][nN][dD]|[bB][iI][qQ][qQ]|[fF][iI][qQ][qQ]|[pP][cC][rR][nN]|[sS][iI][qQ][qQ]|[iT][kK][cC][aA]) {0,}1[zZ]{2})|((([a-pr-uwyzA-PR-UWYZ][a-hk-yxA-HK-XY]?[0-9][0-9]?)|(([a-pr-uwyzA-PR-UWYZ][0-9][a-hjkstuwA-HJKSTUW])|([a-pr-uwyzA-PR-UWYZ][a-hk-yA-HK-Y][0-9][abehmnprv-yABEHMNPRV-Y]))) {0,}[0-9][abd-hjlnp-uw-zABD-HJLNP-UW-Z]{2}))$/,
+	description:"Matches all UK postcodes",
 	tags:"address, postal, zip"
 },
 {
