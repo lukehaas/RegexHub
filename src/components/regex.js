@@ -53,7 +53,7 @@ class Regex extends Component {
 				out = ["null"];
 			} else if(out[0]==="") {
 				out = ["null"];
-			} else {				
+			} else {
 				var o = [];
 				o[0] = out[0];
 				for(var k = 1;k < out.length;k++) {
@@ -92,12 +92,13 @@ class Regex extends Component {
 	render() {
 		var output = <div className="output">Output:<ul>{this.state.output.map((data,i) => {return <li key={i}>{data}</li>})}</ul></div>;
 		return (
-			<div className="panel panel-default">
+			<article className="panel panel-default" vocab="http://schema.org/" typeof="Article">
+				<meta property="image" content="https://projects.lukehaas.me/regexhub/screenshot.png" />
 				<div className="panel-heading">
-					<a href="#" className={this.state.open ? "open" : "closed"} onClick={e => this.handleOpen(e)}>{this.props.name}</a>
+					<h2 property="headline"><a href="#" className={this.state.open ? "open" : "closed"} onClick={e => this.handleOpen(e)}>{this.props.name}</a></h2>
 
 
-					<div className={this.state.open ? "desc" : "desc closed"}><p>{this.props.description}</p></div>
+					<div className={this.state.open ? "desc" : "desc closed"}><p property="description">{this.props.description}</p></div>
 
 				</div>
 				<div className="panel-body">
@@ -109,7 +110,7 @@ class Regex extends Component {
 					</form>
 					{this.state.output.length>0 ? output : ""}
 				</div>
-			</div>
+			</article>
 		);
 	}
 }
@@ -127,5 +128,6 @@ Add reset button - once regex is edited the button will restore it?
 add search
 add details at the bottom for pull requests
 
+https://projects.lukehaas.me/regexhub//?_escaped_fragment_\=
 
 */

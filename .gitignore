@@ -2,7 +2,7 @@
 bundle.js
 npm-debug.log
 index.html
-
+.htaccess
 # IntelliJ
 *.iml
 /.idea
