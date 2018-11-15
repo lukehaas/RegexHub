@@ -183,5 +183,11 @@ export const patterns = [{
 	regex:/^[+-<>.,\[\] \t\n\r]+$/,
 	description:"Matches valid code for a brainfuck program.",
 	tags:"brainfuck, code"
+},
+{
+	name:"Formatted Address",
+	regex:/^([^\n\r,]+)[\s,]+([^\n\r,]+[\s,]+)?([^\n\r,]+),\s+([A-Za-z]+)?[\s]?([0-9\-]+)?(?:[\s,]+([A-Za-z ]+))?$/,
+	description:"Matches formatted addresses include multi-line addresses.  Not foolproof; Street, City, and State must exist at minimum.  Match 1: address. Match 2: Apt/Suite/Unit #, if exist. Match 3: City. Match 4: State.  Match 5: Postal Code.  Match 6: Country",
+	tags:"address"
 }
 ];
