@@ -167,6 +167,12 @@ export const patterns = [{
 	tags:"address, postal, zip"
 },
 {
+	name:"French ZIP/Postal Code",
+	regex:/^([0-8]\d|9[^\D6])\d{3}|29[SN]\d{2}$/,
+	description:"Matches FR ZIP/Postal Code",
+	tags:"address, postal, zip"
+},
+{
 	name:"Morse Code",
 	regex:/^[.-]{1,5}(?:[ \t]+[.-]{1,5})*(?:[ \t]+[.-]{1,5}(?:[ \t]+[.-]{1,5})*)*$/,
 	description:"Matches valid Morse Code",
