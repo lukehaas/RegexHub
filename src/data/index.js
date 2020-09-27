@@ -183,5 +183,11 @@ export const patterns = [{
 	regex:/^[+-<>.,\[\] \t\n\r]+$/,
 	description:"Matches valid code for a brainfuck program.",
 	tags:"brainfuck, code"
+},
+{
+	name:"UUID",
+	regex:/\b[0-9a-f]{8}\b-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-\b[0-9a-f]{12}\b/,
+	description:"Matches a valid UUID.",
+	tags:"uuid, code"
 }
 ];
