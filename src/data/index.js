@@ -183,5 +183,11 @@ export const patterns = [{
 	regex:/^[+-<>.,\[\] \t\n\r]+$/,
 	description:"Matches valid code for a brainfuck program.",
 	tags:"brainfuck, code"
+},
+{
+	name:"Semver",
+	regex:/^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)(?:-((?:0|[1-9][0-9]*|[0-9]*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9][0-9]*|[0-9]*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/,
+	description:"Matches valid semantic versioning.",
+	tags:"semver,semantic,versioning,version"
 }
 ];
