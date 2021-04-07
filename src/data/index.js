@@ -189,5 +189,11 @@ export const patterns = [{
 	regex:/^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)(?:-((?:0|[1-9][0-9]*|[0-9]*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9][0-9]*|[0-9]*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/,
 	description:"Matches valid semantic versioning.",
 	tags:"semver,semantic,versioning,version"
+},
+{
+	name:"Non ascii characters",
+	regex:/[^\x00-\x7F]+/,
+	description:"Matches all non ascii characters.",
+	tags:"ascii"
 }
 ];
