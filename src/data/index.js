@@ -189,5 +189,11 @@ export const patterns = [{
 	regex:/^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)(?:-((?:0|[1-9][0-9]*|[0-9]*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9][0-9]*|[0-9]*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/,
 	description:"Matches valid semantic versioning.",
 	tags:"semver,semantic,versioning,version"
-}
+},
+{
+	name: "UUID",
+	regex:/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/,
+	description: "Matches valid UUIDs.",
+	tags: "uuid, guid"
+}			 
 ];
