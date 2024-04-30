@@ -18,3 +18,5 @@ Each pattern requires the following details:
 ### License
 
 [MIT License](http://dsf.com)
+
+Browser testing via [![lambda test](https://www.lambdatest.com/support/img/logo.svg)](https://www.lambdatest.com/)
