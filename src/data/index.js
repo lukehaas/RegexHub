@@ -189,5 +189,11 @@ export const patterns = [{
 	regex:/^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)(?:-((?:0|[1-9][0-9]*|[0-9]*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9][0-9]*|[0-9]*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/,
 	description:"Matches valid semantic versioning.",
 	tags:"semver,semantic,versioning,version"
+},
+{
+	name:"Match All Plus",
+	regex:/^(?!.)*(.*\n*.*)*/,
+	description:"Match all characters include newline. Flag 'g' is optional.",
+	tags:"match,all,any"
 }
 ];
