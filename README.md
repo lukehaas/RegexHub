@@ -1,6 +1,6 @@
 # Regex Hub
 
-The project is hosted here: https://projects.lukehaas.me/regexhub
+The project is hosted here: https://lukehaas.me/projects/regexhub
 
 ### Adding a new pattern
 
@@ -17,6 +17,6 @@ Each pattern requires the following details:
 
 ### License
 
-[MIT License](http://dsf.com)
+[MIT License](https://raw.githubusercontent.com/lukehaas/RegexHub/refs/heads/master/LICENSE)
 
 Browser testing via [![lambda test](https://www.lambdatest.com/support/img/logo.svg)](https://www.lambdatest.com/)
